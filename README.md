@@ -1,28 +1,28 @@
-# Atividade 2 - Firmware De Telemetria Com Raspberry Pi Pico W
+# Ponderada 2 - Firmware De Telemetria Com Raspberry Pi Pico W
 
 ## Contexto
 
-Esta entrega expande a arquitetura implementada na Atividade 1 com um cliente
+Esta entrega expande a arquitetura implementada na Ponderada 1 com um cliente
 embarcado capaz de enviar telemetrias ao backend já existente.
 
-Na Atividade 1, o sistema foi estruturado com:
+Na Ponderada 1, o sistema foi estruturado com:
 
 - backend HTTP em NestJS
 - fila RabbitMQ para desacoplamento
 - worker para consumo assíncrono
 - persistência em PostgreSQL
 
-Nesta Atividade 2, o objetivo foi integrar um Raspberry Pi Pico W para atuar
+Nesta Ponderada 2, o objetivo foi integrar um Raspberry Pi Pico W para atuar
 como origem das telemetrias. 
 
 Com isso, a solução implementada nesta pasta usa um Pico W simulado no Wokwi,
 gera leituras aleatórias de sensores analógicos e digitais e envia essas
-telemetrias para o backend da Atividade 1 via HTTP.
+telemetrias para o backend da Ponderada 1 via HTTP.
 
 ## Links Úteis
 
 
-- [Repositório da Atividade 1](/home/inteli/ponderadas/aula_murilo/README.md)
+- [Repositório da Ponderada 1](https://github.com/MiguelClaret/pond-prog-S07-M09)
 - [Link do Wokwi](https://wokwi.com/projects/459776518753677313)
 
 
@@ -45,7 +45,7 @@ O firmware implementado em [main.py](./main.py) executa as seguintes etapas:
 4. envia os dados ao endpoint `POST /telemetria-sensores`
 5. faz retry em caso de falha de transmissão
 
-O payload enviado ao backend segue o contrato atualmente aceito pela Atividade 1:
+O payload enviado ao backend segue o contrato atualmente aceito pela Ponderada 1:
 
 ```json
 {
@@ -63,7 +63,7 @@ O `backend` complementa o registro com:
 
 ## Descricao Dos Sensores Integrados
 
-Nesta versao da atividade, os sensores foram simulados por software dentro do
+Nesta versao da ponderada, os sensores foram simulados por software dentro do
 Wokwi. Portanto, nao ha sensores fisicos conectados em GPIOs reais nesta
 entrega.
 
@@ -99,7 +99,7 @@ INTERVALO_DE_ENVIO = 10
 
 ### Exposicao Do Backend Com Cloudflared Tunnel
 
-Durante os testes, o backend da Atividade 1 foi executado localmente e exposto
+Durante os testes, o backend da Ponderada 1 foi executado localmente e exposto
 para acesso externo por meio de um `cloudflared tunnel`.
 
 Objetivo dessa etapa:
