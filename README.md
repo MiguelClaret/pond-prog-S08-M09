@@ -19,7 +19,7 @@ Com isso, a solução implementada nesta pasta usa um Pico W simulado no Wokwi,
 gera leituras aleatórias de sensores analógicos e digitais e envia essas
 telemetrias para o backend da Atividade 1 via HTTP.
 
-## Referencia Para A Atividade 1
+## Links Úteis
 
 
 - [Repositório da Atividade 1](/home/inteli/ponderadas/aula_murilo/README.md)
